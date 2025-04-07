@@ -4,38 +4,38 @@
 /// bottom -> top [bottom -> top] [right]
 
 var generateMatrix = function(n) {
-    let matrix = Array.from({ length: n }, () => Array(n).fill(0));    let left = 0;
-    let right = n - 1;
-    let top = 0;
-    let bottom = n - 1;
-    let num = 1
-    while (left <= right && top <= bottom){
-        for (i = left; i <= right
-            ; i++){
-            matrix[top][i] = num
-            ++num
+    let matrix = Array.from({ length: n }, () => Array(n).fill(0));
+    let left = 0, right = n - 1, top = 0, bottom = n - 1;
+    let num = 1;
+
+    while (left <= right && top <= bottom) {
+        for (let i = left; i <= right; i++) {
+            matrix[top][i] = num++;
         }
-        top += 1
-        for (i = top; i <= bottom; i++){
-            matrix[i][right] = num
-            ++num
+        top++;
+        
+        for (let i = top; i <= bottom; i++){
+            matrix[i][right] = num++;
         }
-        right -= 1
-        if (left <= right){
-        for (i = right; i >= left; i++){
-            matrix[bottom][i] = num
-            ++num
+        right--;
+        
+        if (top <= bottom) {
+            for (let i = right; i >= left; i--){ 
+                matrix[bottom][i] = num++;
+            }
+            bottom--;
+            
         }
-        bottom -= 1
+        if (left <= right) {
+            for (let i = bottom; i >= top; i--){ 
+                matrix[i][left] = num++;
+            }
+            left++;
+            
+        }
     }
-        if (top <= bottom){
-        for (i = bottom; i >= top; i++){
-            matrix[i][left] = num
-            ++num
-        }
-        left += 1
-    }
-    }
+
     return matrix;
 };
-console.log(generateMatrix(3))
+
+console.log(generateMatrix(3));
