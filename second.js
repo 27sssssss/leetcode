@@ -1,3 +1,8 @@
+/// left -> right [top] [right -> left] 
+/// top -> bottom [top -> bottom] [left]
+/// right -> left [bottom] [left -> right]
+/// bottom -> top [bottom -> top] [right]
+
 var generateMatrix = function(n) {
     let matrix = Array(n).fill().map(() => Array(n).fill(0));
     let left = 0;
