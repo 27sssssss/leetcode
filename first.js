@@ -1,3 +1,4 @@
+// leetcode.com/submissions/detail/1593632c147/
 // 1 - use couples alg with casual for cycle
 // 2 - everytime we find a letter we increase counter by 1 
 // until iterator + 1 is not equal to our symbol
