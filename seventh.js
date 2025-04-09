@@ -1,0 +1,2 @@
+//actually 2 ways - first just sort and use binary search in that way we gonna have least complexity of (n)
+// second - somehow find a pivot index and use 2 binary searchs for target. in this way we gonna have O(log n)

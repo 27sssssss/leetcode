@@ -1,5 +1,5 @@
 var isPalindrome = function(s) {
-    let new1 = s.replace(/[^a-zA-Z]/g, '').toLowerCase()
+    let new1 = s.replace(/[^a-zA-Z0-9]/g, '').toLowerCase()
     let left = 0;
     let right = new1.length - 1
     console.log(new1)
@@ -14,4 +14,4 @@ var isPalindrome = function(s) {
     }
     return true
 };
-console.log(isPalindrome("race a car"))
+console.log(isPalindrome("0P"))
