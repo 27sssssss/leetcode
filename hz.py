@@ -21,14 +21,15 @@ def searchMatrix(matrix, target):
         end = cel_len - 1
         cel = matrix[idx]
         print("This is idx " + str(idx))
-        print("This is start idx" + str(start))
-        print("This is end idx" + str())
+        print("This is start idx " + str(start))
+        print("This is end idx " + str(end))
 
         while (start <= end):
             mid_idx = (start + end) // 2
+            print(cel[mid_idx])
             if (cel[mid_idx] == target):
                  return True
-            elif(cel[mid_idx] < target):
+            elif(cel[mid_idx] > target):
                  end = mid_idx - 1
             else:
                  start = mid_idx + 1
