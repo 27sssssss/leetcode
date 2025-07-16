@@ -6,10 +6,11 @@ def searchMatrix(matrix, target):
         idx = -1
         start = 0
         end = cels - 1
-        if (target < start): #dead case
-            idx = 0
+
         while (idx == -1 and start <= end):
+
             mid_idx = (start + end) // 2
+            print("This is first : " + str(matrix[mid_idx][0]) + " and this is last of array " + str(matrix[mid_idx][-1]))
             if (matrix[mid_idx][0] <= target and target <= matrix[mid_idx][-1]):
                 idx = mid_idx
             elif (matrix[mid_idx][0] > target):
@@ -37,10 +38,6 @@ def searchMatrix(matrix, target):
         return False
 
 
-lasd = [[1, 3, 5, 7, 9, 11],
-    [15, 17, 19, 22, 24, 27],
-    [30, 33, 36, 40, 45, 50],
-    [55, 60, 66, 73, 81, 90],
-    [100, 111, 123, 136, 150, 165]]
+lasd = [[-10,-10,-8,-7,-6],[-4,-4,-3,-2,0],[1,1,2,2,4]]
 
-print(searchMatrix(lasd, 50))
+print(searchMatrix(lasd, -4))
