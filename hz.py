@@ -2,7 +2,7 @@ def searchMatrix(matrix, target):
         cel_len = len(matrix[0]) #amount of cells in each row
         cels = len(matrix) #amount of rows
         
-        #we should use binary search to detect if such array that could include such number exists
+        #we should use binary search to detect if such array that could include such number exists123
         idx = -1
         start = 0
         end = cels - 1
